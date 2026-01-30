@@ -67,13 +67,13 @@ def find_gcd_two(a, b):
         temp = b
         b = a % b
         a = temp
-    return a
+    return
 
-def find_gcd_three(x, y, z):
-    gcd_xy = find_gcd_two(x, y)
+def find_gcd_three(a, b, c):
+    gcd_ab = find_gcd_two(a, b)
 
-    gcd_xyz = find_gcd_two(gcd_xy, z)
-    return gcd_xyz
+    gcd_abc = find_gcd_two(gcd_ab, c)
+    return gcd_abc
 
 print("Введите три натуральных числа:")
 a = int(input("Первое число: "))
