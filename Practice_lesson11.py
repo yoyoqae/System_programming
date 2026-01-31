@@ -75,8 +75,17 @@ def print_result(flats):
     for flat in flats:
         print(flat)
 
-    print("\nМинимальная цена:", min(prices))
-    print("Максимальная цена:", max(prices))
+    minValue = min(prices)
+    maxValue = max(prices)
+    if(minValue > 0):
+        print("\nМинимальная цена:", min(prices))
+    else:
+        return
+
+    if(maxValue > 0):
+        print("Максимальная цена:", max(prices))
+    else:
+        return
 
 
 def main():
@@ -84,6 +93,5 @@ def main():
     params = get_search_params()
     result = filter_flats(flats, params)
     print_result(result)
-
 
 main()
