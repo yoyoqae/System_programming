@@ -88,9 +88,12 @@ def AddNewTask():
                              "2 - Не выполнено\n"
                              "Ваш выбор: ")
 
-    cursor.execute("INSERT INTO List (Task, Status) values(?, ?)", (inputTask, selectStatus))
+    executeResult = cursor.execute("INSERT INTO List (Task, Status) values(?, ?)", (inputTask, selectStatus))
 
-    print("Задача успешно добавлена в список, статус задачи: ", selectStatus)
+    if executeResult:
+        print("Задача успешно добавлена в список, статус задачи: ", selectStatus)
+    else:
+        print("Ошибка добавления данных!")
 
     DisplayAllTasks()
 
