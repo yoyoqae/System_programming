@@ -7,8 +7,12 @@
 #         print(f"Буква: {ch}")
 #         return 0
 #     elif ch.isdigit():
+#         if ch == '0':
+#             exit(0)
+#
 #         print(f"Цифра: {ch}")
 #         return 0
+#
 #     else:
 #         print("Некорректный символ. Введите букву или цифру.")
 #         return -1
@@ -16,13 +20,15 @@
 # while True:
 #     ch = input("Введите символ: ")
 #
+#
 #     if len(ch) != 1:
 #         print("Пожалуйста, введите ровно один символ")
 #         continue
 #
 #     else :
 #         keypress(ch)
-#         break
+
+
 
 # 16. Найдите минимальный элемент из нечетных элементов массива,
 # введенных с клавиатуры. Количество элементов вводится первым числом
@@ -30,7 +36,7 @@
 # import random
 #
 # def minEl(arr_size) :
-#     onlyODDNumbers = []
+#     nechet = []
 #     arr = []
 #
 #     if arr_size > 0:
@@ -43,13 +49,13 @@
 #
 #         for j in range(len(arr)):
 #             if arr[j] % 2 != 0:
-#                 onlyODDNumbers.append(arr[j])
+#                 nechet.append(arr[j])
 #
-#         if len(onlyODDNumbers) <= 0:
+#         if len(nechet) <= 0:
 #             print("Нечетного числа в массиве нет!")
 #             exit(0)
 #
-#         return min(onlyODDNumbers)
+#         return min(nechet)
 #
 #     else:
 #         print("Введите положительное число!")
@@ -69,11 +75,11 @@ def find_gcd_two(a, b):
         a = temp
     return a
 
-def find_gcd_three(x, y, z):
-    gcd_xy = find_gcd_two(x, y)
+def find_gcd_three(a, b, c):
+    gcd_ab = find_gcd_two(a, b)
 
-    gcd_xyz = find_gcd_two(gcd_xy, z)
-    return gcd_xyz
+    gcd_abc = find_gcd_two(gcd_ab, c)
+    return gcd_abc
 
 print("Введите три натуральных числа:")
 a = int(input("Первое число: "))
