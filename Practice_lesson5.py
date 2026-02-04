@@ -3,31 +3,33 @@ import turtle
 turtle.Turtle()
 pen = turtle.Pen()
 screen = turtle.Screen()
-pen.pensize(7)
+pen.pensize(3)
+pen.speed(0)
 
 turtle.shape("turtle")
+screen.bgcolor("skyblue")
 
 #трава
-screen.bgcolor("green")
-
-#небо
 pen.penup()
-pen.goto(-400,-100)
+pen.goto(-500, -150)
 pen.pendown()
-pen.color("skyblue")
+pen.pencolor("green")
 pen.begin_fill()
 for i in range(2):
-    pen.forward(800)
-    pen.left(90)
-    pen.forward(500)
-    pen.left(90)
+    pen.forward(1000)
+    pen.right(90)
+    pen.forward(250)
+    pen.right(90)
+pen.color("green")
 pen.end_fill()
+
+
 
 #дом
 pen.penup()
-pen.goto(-100, -100)
+pen.goto(-100, -147)
 pen.pendown()
-pen.color("white")
+pen.color("orange")
 pen.pensize(3)
 pen.begin_fill()
 for i in range(4):
@@ -38,9 +40,9 @@ pen.end_fill()
 
 #крыша
 pen.penup()
-pen.goto(-127,70)
+pen.goto(-127,25)
 pen.pendown()
-pen.color("black")
+pen.color("brown")
 pen.begin_fill()
 for i in range(3):
     pen.forward(225)
@@ -49,7 +51,7 @@ pen.end_fill()
 
 #окно
 pen.penup()
-pen.goto(0,0)
+pen.goto(0,-50)
 pen.pendown()
 pen.color("skyblue")
 pen.begin_fill()
@@ -60,14 +62,14 @@ pen.end_fill()
 
 #крестовина на окне (горизонтально)
 pen.penup()
-pen.goto(0,25)
+pen.goto(0,-25)
 pen.pendown()
 pen.color("black")
 pen.forward(50)
 
 #вертикально
 pen.penup()
-pen.goto(25,0)
+pen.goto(25,-50)
 pen.pendown()
 pen.color("black")
 pen.left(90)
@@ -75,7 +77,7 @@ pen.forward(50)
 
 #дверь
 pen.penup()
-pen.goto(-70,-90)
+pen.goto(-80,-147)
 pen.pendown()
 pen.right(90)
 pen.color("brown")
@@ -87,9 +89,9 @@ for i in range(2):
     pen.left(90)
 pen.end_fill()
 
-#окно
+#окно на крыше
 pen.penup()
-pen.goto(-50,100)
+pen.goto(-50,50)
 pen.pendown()
 pen.color("skyblue")
 pen.begin_fill()
@@ -100,18 +102,53 @@ pen.end_fill()
 
 #крестовина на окне (горизонтально)
 pen.penup()
-pen.goto(-50,125)
+pen.goto(-50,75)
 pen.pendown()
 pen.color("black")
 pen.forward(50)
 
 #вертикально
 pen.penup()
-pen.goto(-25, 100)
+pen.goto(-25, 50)
 pen.pendown()
 pen.color("black")
 pen.left(90)
 pen.forward(50)
+
+#Ромашка
+pen.penup()
+pen.goto(190, -145)
+pen.setheading(90)
+pen.pendown()
+
+# Стебель
+pen.color("green")
+pen.width(4)
+pen.forward(70)
+
+# Центр цветка (белый круг)
+pen.penup()
+pen.goto(200, -75)
+pen.pendown()
+pen.color("white")
+pen.begin_fill()
+pen.circle(12)
+pen.end_fill()
+
+# Лепестки
+pen.penup()
+pen.goto(270, -63)
+pen.pendown()
+pen.color("yellow")
+pen.width(6)
+
+for angle in range(0, 360, 45):
+    pen.penup()
+    pen.goto(190, -63)
+    pen.setheading(angle)
+    pen.pendown()
+    pen.forward(25)
+
 
 pen.penup()
 pen.goto(200,200)
