@@ -6,7 +6,6 @@ screen = turtle.Screen()
 pen.pensize(3)
 pen.speed(0)
 
-turtle.shape("turtle")
 screen.bgcolor("skyblue")
 
 #трава
@@ -22,8 +21,6 @@ for i in range(2):
     pen.right(90)
 pen.color("green")
 pen.end_fill()
-
-
 
 #дом
 pen.penup()
@@ -128,7 +125,7 @@ pen.forward(70)
 
 # Центр цветка (белый круг)
 pen.penup()
-pen.goto(200, -75)
+pen.goto(202, -63)
 pen.pendown()
 pen.color("white")
 pen.begin_fill()
