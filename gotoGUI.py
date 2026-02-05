@@ -12,10 +12,47 @@ DB_NAME = "ToDoList.db"
 def connect():
     return sqlite3.connect(DB_NAME)
 
+def create_tables():
+    conn = connect()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS Categories (
+        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+        Name TEXT UNIQUE
+    )
+    """)
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS List (
+        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+        Task TEXT NOT NULL,
+        Status INTEGER DEFAULT 0,
+        CategoryId INTEGER,
+        FOREIGN KEY (CategoryId) REFERENCES Categories(Id)
+    )
+    """)
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS TaskDates (
+        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+        TaskId INTEGER,
+        CreatedAt TEXT,
+        Deadline TEXT,
+        FOREIGN KEY (TaskId) REFERENCES List(Id)
+    )
+    """)
+
+    # базовые категории
+    cursor.execute("INSERT OR IGNORE INTO Categories (Name) VALUES ('Учёба'), ('Работа'), ('Дом')")
+
+    conn.commit()
+    conn.close()
 
 class ToDoApp(QWidget):
     def __init__(self):
         super().__init__()
+        create_tables()
         self.setWindowTitle("ToDo List")
         self.setGeometry(300, 200, 700, 450)
 
