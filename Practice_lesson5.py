@@ -113,17 +113,14 @@ pen.left(90)
 pen.forward(50)
 
 #Ромашка
-pen.penup()
-pen.goto(190, -145)
-pen.setheading(90)
-pen.pendown()
 
-# Стебель
+
+#Стебель
 pen.color("green")
 pen.width(4)
 pen.forward(70)
 
-# Центр цветка (белый круг)
+#Центр цветка (белый круг)
 pen.penup()
 pen.goto(202, -63)
 pen.pendown()
@@ -132,7 +129,7 @@ pen.begin_fill()
 pen.circle(12)
 pen.end_fill()
 
-# Лепестки
+#Лепестки
 pen.penup()
 pen.goto(270, -63)
 pen.pendown()

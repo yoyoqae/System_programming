@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="068c1734-c011-4a29-b358-a9e92e750686" name="Changes" comment="turtle completed">
-      <change afterPath="$PROJECT_DIR$/UP_03-01_WITH_GUI.py" afterDir="false" />
+    <list default="true" id="068c1734-c011-4a29-b358-a9e92e750686" name="Changes" comment="todoWithGUI">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice_lesson5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Practice_lesson5.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ToDoList.db" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/gotoGUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,18 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "yoyoqae"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yoyoqae&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/yoyoqae/System_programming.git",
-    "accountId": "26fb7307-5ef6-46fb-9b82-68c552ac5f28"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/yoyoqae/System_programming.git&quot;,
+    &quot;accountId&quot;: &quot;26fb7307-5ef6-46fb-9b82-68c552ac5f28&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -55,6 +57,7 @@
     "Python.new.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/Студент/Desktop/new.py",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
@@ -109,11 +112,20 @@
       <option name="project" value="LOCAL" />
       <updated>1770203682961</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="todoWithGUI">
+      <option name="closed" value="true" />
+      <created>1770204493267</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1770204493267</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="turtle completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="turtle completed" />
+    <MESSAGE value="todoWithGUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="todoWithGUI" />
   </component>
 </project>
